@@ -13,8 +13,8 @@ import java.util.Map;
 public interface BookOaService {
 
     @GetMapping(value = "/addBook/{id}/{name}")
-    public Boolean addBook(@PathVariable("id") Integer id, @PathVariable("name") String name);
+    Boolean addBook(@PathVariable("id") Integer id, @PathVariable("name") String name);
     //-------
     @GetMapping(value = "/addBook/{name}")
-    public Map<Integer,String> getBookLike(@PathVariable("name") String book);
+    Map<Integer,String> getBookLike(@PathVariable("name") String book);
 }
