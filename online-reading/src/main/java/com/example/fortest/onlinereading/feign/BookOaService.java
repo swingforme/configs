@@ -14,7 +14,7 @@ public interface BookOaService {
 
     @GetMapping(value = "/addBook/{id}/{name}")
     Boolean addBook(@PathVariable("id") Integer id, @PathVariable("name") String name);
-    //-------
+
     @GetMapping(value = "/addBook/{name}")
     Map<Integer,String> getBookLike(@PathVariable("name") String book);
 }
