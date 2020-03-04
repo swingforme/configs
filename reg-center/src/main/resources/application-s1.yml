@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: reg-center
+  security:
+    user:
+      password: 123456
+      name: admin
+
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: uk1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@uk2:7002/eureka/
+
